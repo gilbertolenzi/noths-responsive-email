@@ -130,6 +130,13 @@ a:hover {
 }
 
 
+.table_heading {
+	text-align: center;
+	margin: 0 auto;
+	background-color:#ececec;
+	margin-bottom:1em;
+}
+
     /****** MEDIA QUERIES ********/
     /* You must use attribute selectors in your media queries to prevent Yahoo from rendering these styles.  
        We added a yahoo attribute in the body tag to complete this fix. 
@@ -137,11 +144,16 @@ a:hover {
 
     /* Target mobile devices. */
     /* @media only screen and (max-device-width: 639px) { */
-    @media only screen and (max-width: 480px) { /* TEMPORARY */
+    @media only screen and (max-width: 600px) { /* TEMPORARY */
 /* Hide elements at smaller screen sizes (!important needed to override inline CSS). */
       body[yahoo] .hide {
 	display:none !important;
 }
+
+body[yahoo] .hide {
+	display:none !important;
+}
+
 /* Adjust table widths at smaller screen sizes. */
       body[yahoo] .table {
 	width:320px !important;
@@ -376,11 +388,16 @@ The yahoo attribute is added if you are using media queries for mobile devices (
               <!-- /2col article -->
               <!-- 3col article -->
               
-              <table width="560" cellpadding="0" cellspacing="0" border="0" align="center" class="innertable" style="margin-bottom:1em;" >
-                <tr valign="top"> 
+              <table width="560" cellpadding="0" cellspacing="0" border="0" align="center" class="innertable" style="margin-bottom:1em;">
+                <tr>
+                  <td valign="top">
+                    <h3>The Featured products of the week</h3>
+                  </td>
+                </tr>
+                <tr> 
                   <!-- standard article textarea -->
-                  <td><table width="174" cellpadding="0" cellspacing="0" border="0" style="margin-right:10px;" align="left" class="subtable">
-                      <tr valign="top"> 
+                  <td valign="top"><table width="174" cellpadding="0" cellspacing="0" border="0" style="margin-right:10px;" align="left" class="subtable">
+                  	  <tr valign="top"> 
                         <!-- standard article icon -->
                         <td><img style="margin-bottom:1em;" src="http://www.placehold.it/174x174/dedede/ffffff&text=hero+2col+image" width="174" height="174" border="0" alt="" />
                           <h2 style="color:#434343; margin:10px;"><a style="color:#434343;" href="#" target="_blank">White Porcelain Butterfly Vase</a></h2></td>
@@ -542,8 +559,7 @@ The yahoo attribute is added if you are using media queries for mobile devices (
                 <tr>
                   <td><table align="left" bgcolor="#434343" text="#ffffff" width="350" cellpadding="10" cellspacing="0" border="0" class="footer-left">
                       <tr>
-                        <td style="color:#ffffff;"><p><a href="*|FORWARD|*" target="_blank" style="color:#ffffff; text-decoration:none;">Send to a friend</a> <span style="color:#cbc0a6;">&#124;</span> <a href="*|LIST:URL|*" target="_blank" style="color:#ffffff; text-decoration:none;">Contact us</a><br />
-                            <a href="*|UNSUB|*" target="_blank" style="color:#ffffff; text-decoration:none;">Unsubscribe</a></p></td>
+                        <td style="color:#ffffff;"><p> <a href="*|LIST:URL|*" target="_blank" style="color:#ffffff; text-decoration:none;">Contact us</a> <span style="color:#cbc0a6;">&#124;</span> <a href="*|UNSUB|*" target="_blank" style="color:#ffffff; text-decoration:none;">Unsubscribe</a></p></td>
                       </tr>
                     </table>
                     <table align="right" bgcolor="#434343" text="#ffffff" width="250" cellpadding="10" cellspacing="0" border="0" class="footer-right">
